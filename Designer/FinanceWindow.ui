@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FinanceWindow</class>
+ <widget class="QMainWindow" name="FinanceWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>940</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>940</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>940</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Open Sans Condensed SemiBold</family>
+    <pointsize>14</pointsize>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>FinanceWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: rgb(233, 234, 255)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Open Sans Condensed SemiBold</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <widget class="QTabWidget" name="incomesTabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1000</width>
+      <height>615</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1000</width>
+      <height>615</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1000</width>
+      <height>615</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Open Sans Condensed SemiBold</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="incomesWidget">
+     <attribute name="title">
+      <string>Доходы</string>
+     </attribute>
+     <widget class="QPushButton" name="openIncomesDiagrammButton">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>480</y>
+        <width>300</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>16</pointsize>
+        <bold>true</bold>
+        <underline>true</underline>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    text-decoration: underline; 
+}
+QPushButton:hover {
+    color: red; 
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Открыть диаграмму доходов</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="incomesCategoryComboBox">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>525</y>
+        <width>200</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Зарплата</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Премия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Инвестиционные доходы</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Подарок</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="sumIncomesLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>295</x>
+        <y>525</y>
+        <width>250</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: none;
+    border-radius: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid blue;
+}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Введите сумму дохода</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="incomesDateEdit">
+      <property name="geometry">
+       <rect>
+        <x>565</x>
+        <y>525</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveIncomesButton">
+      <property name="geometry">
+       <rect>
+        <x>685</x>
+        <y>525</y>
+        <width>180</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    border: 2px solid blue;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Сохранить</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sortIncomesLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>150</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Упорядочить по:</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="sortIncomesCombobox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>20</y>
+        <width>150</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Дате</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Зарплата</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Премия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Инвестиционные доходы</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Подарок</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="viewIncomesLabel">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>20</y>
+        <width>180</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Показать доходы с</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="viewFirstDateEdit">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>20</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="viewIncomesLabel2">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>20</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>по</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="viewSecondDateEdit">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>20</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="incomesTableWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>902</width>
+        <height>400</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="columnCount">
+       <number>3</number>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>300</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>300</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Категория</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans Condensed SemiBold</family>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Сумма</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans Condensed SemiBold</family>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Дата</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans Condensed SemiBold</family>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="expensesWidget">
+     <attribute name="title">
+      <string>Расходы</string>
+     </attribute>
+     <widget class="QLabel" name="sortExpensesLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>150</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Упорядочить по:</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="sortExpensesCombobox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>20</y>
+        <width>150</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Дате</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Продукты</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Бытовые товары</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Оплата ЖКХ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Связь и интернет</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Транспорт</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Развлечения</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="viewExpensesLabel">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>20</y>
+        <width>180</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Показать расходы с</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="viewFirstDateEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>20</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="viewExpensesLabel2">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>20</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>по</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="viewSecondDateEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>20</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="openExpensesDiagrammButton">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>480</y>
+        <width>300</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+        <underline>true</underline>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    text-decoration: underline; 
+}
+QPushButton:hover {
+    color: red; 
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Открыть диаграмму расходов</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="expensesCategoryComboBox">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>525</y>
+        <width>200</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Продукты</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Бытовые товары</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Оплата ЖКХ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Связь и интернет</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Транспорт</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Развлечения</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="sumExpensesLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>295</x>
+        <y>525</y>
+        <width>250</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: none;
+    border-radius: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid blue;
+}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Введите сумму расхода</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="expensesDateEdit">
+      <property name="geometry">
+       <rect>
+        <x>565</x>
+        <y>525</y>
+        <width>110</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit {
+    border-radius: 5px;
+	border: 1px solid black;
+}</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveExpensesButton">
+      <property name="geometry">
+       <rect>
+        <x>685</x>
+        <y>525</y>
+        <width>180</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    border: 2px solid blue;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Сохранить</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="expensesTableWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>902</width>
+        <height>400</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Open Sans Condensed SemiBold</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="columnCount">
+       <number>3</number>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>300</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>300</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Категория</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans Condensed SemiBold</family>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Сумма</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans Condensed SemiBold</family>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Дата</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans Condensed SemiBold</family>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="userInfoLabel">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>640</y>
+      <width>350</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Open Sans Condensed SemiBold</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: blue;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
